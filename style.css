@@ -1,0 +1,494 @@
+body {
+  background-color: #4F8892;
+  margin: 0%;
+  overflow-x: hidden;
+
+}
+
+.svg {
+  transition: 0.5s;
+}
+
+.svg:hover {
+  animation: logo 2s linear infinite;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+
+  75% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #407076;
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+  position: relative;
+}
+
+.dropdown {
+  background-color: rgb(1, 139, 139);
+  padding: 1em 0;
+  position: absolute;
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+  color: white;
+}
+
+.dropdown li+li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+a.active {
+  color: bisque;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+
+  .menu li+li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked~.menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+}
+
+
+.vid-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tag {
+  font-size: 2vw;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 12vw
+}
+@media(max-width: 426px) {
+  .tag{
+    font-size:3vw;
+    margin: 12vw
+  }
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.img1 {
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.5s;
+}
+
+.img1:hover {
+  transform: scale(1.02);
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #4F8892;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+}
+
+.img2 {
+  max-width: 100%;
+  max-height: 100%;
+  filter: grayscale(0%);
+  transition: 0.5s;
+
+}
+
+.img2:hover {
+  filter: grayscale(100%);
+}
+
+.img3 {
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.5s;
+}
+
+.img3:hover {
+  transform: rotateY(180deg);
+  transition: 0.5s;
+}
+
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 700px) {
+  .card {
+    max-width: 100%;
+    margin: 10vw;
+  }
+
+  .grid-container {
+    display: block;
+  }
+}
+
+.article-title {
+  font-size: 25px;
+}
+
+.footer-container {
+  background-color: #407076;
+  padding: 20px;
+}
+
+footer {
+  margin-top: 100px;
+  color: white;
+}
+
+.dropdown li a {
+  color: white;
+}
+
+.nav-item {
+  color: white;
+}
+
+.footer-nav li a+.class {
+  color: bisque;
+}
+
+.footer-logo {
+  text-align: right;
+}
+
+.cruise-heading {
+  font-size: 2vw;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 4vw 40vw 5vw 40vw;
+}
+
+@media screen and (max-width: 700px) {
+  .cruise-heading {
+    font-size: 4vw;
+    margin: 4vw 35vw 5vw 35vw;
+
+  }
+}
+
+.cruise {
+  background-color: #407076;
+  width: 90%;
+
+}
+
+.cruise2 {
+  background-color: #407076;
+  width: 90%;
+
+}
+
+.cruise3 {
+  background-color: #407076;
+  width: 90%;
+
+}
+
+.cruise-cards {
+  text-align: center;
+  margin: 4vw 15vw 10vw 15vw;
+}
+
+.cruise-title {
+  text-align: left;
+}
+
+.cruise-desc {
+  text-align: left;
+  font-size: 1.3vw;
+}
+
+.cruise-para {
+  max-width: 26vw;
+}
+
+.boxLeft {
+  background-color: #407076;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 45vw;
+  max-height: 28vw;
+
+}
+
+.contact-heading {
+  text-align: center;
+  color: white;
+  font-size: 1.7vw;
+}
+
+form {
+  color: white;
+  font-size: 1.2vw;
+}
+
+input {
+  color: black;
+  width: 100%;
+  font-size: 1.1vw;
+  margin-bottom: 1vw;
+  padding: 2px;
+}
+
+textarea {
+  width: 100%;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.1vw;
+  padding: 2px;
+}
+
+.contactText {
+  color: white;
+  text-align: center;
+  margin-left: 7.5vw;
+}
+
+.msg {
+
+  margin-left: 7.5vw;
+}
+
+.contactExtra {
+  color: white;
+  text-align: center;
+  margin-top: 10vw;
+  margin-left: 4vw;
+}
+
+.contactGrid {
+  display: flex;
+}
+
+.fa-comments {
+  margin-left: 7.5vw;
+}
+
+.submit {
+  background-color: aliceblue;
+  border: none;
+  font-weight: bold;
+  border-radius: 2px;
+  max-width: 30%;
+  min-height: 3vh;
+  margin-top: 0.5vw;
+  transition: 0.5s;
+}
+
+.submit:hover {
+  background-color: #4c9e9e;
+  color: white;
+}
+
+.submitDiv {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .contactGrid {
+    display: block;
+  }
+
+  .boxLeft {
+    max-height: 100%;
+  }
+
+  .contactExtra {
+    margin-left: 0.0009vw;
+    margin-right: 6vw;
+  }
+
+  .msg {
+    margin-left: none;
+  }
+
+  .contactText {
+    margin-left: none;
+  }
+
+  .fa-comments {
+    margin-left: none;
+  }
+
+  form {
+    color: white;
+    font-size: 3.5vw;
+  }
+
+  .contact-heading {
+    text-align: center;
+    color: white;
+    font-size: 4.5vw;
+  }
+
+  .submit {
+    font-size: 2.5vw;
+  }
+  input{
+    font-size: 3.5vw;
+  }
+  textarea{
+    font-size: 3.5vw;
+  }
+
+}
